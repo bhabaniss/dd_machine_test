@@ -1,0 +1,80 @@
+package FireFoxDesktop;
+
+import org.testng.annotations.Test;
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.imageio.ImageIO;
+
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+import com.assertthat.selenium_shutterbug.core.Capture;
+import com.assertthat.selenium_shutterbug.core.PageSnapshot;
+import com.assertthat.selenium_shutterbug.core.Shutterbug;
+
+public class Desktop3 {
+	Calendar cal = Calendar.getInstance();
+	Date Time = cal.getTime();
+	String timestamp = Time.toString().replace(":", "").replace(" ", "");
+
+	@Test
+	public void site1() throws IOException {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.getcalley.com/");
+		driver.manage().window().setSize(new Dimension(1536, 864));
+		PageSnapshot ss = Shutterbug.shootPage(driver, Capture.FULL, true);
+		ImageIO.write(ss.getImage(), "PNG",
+				new File("./AllScreenshot/Firefox_desktop_1536x864_site1" + timestamp + ".png"));
+		driver.close();
+	}
+
+	@Test
+	public void site2() throws IOException {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.getcalley.com/calley-call-from-browser/");
+		driver.manage().window().setSize(new Dimension(1536, 864));
+		PageSnapshot ss = Shutterbug.shootPage(driver, Capture.FULL, true);
+		ImageIO.write(ss.getImage(), "PNG",
+				new File("./AllScreenshot/Firefox_desktop_1536x864_site2" + timestamp + ".png"));
+		driver.close();
+	}
+
+	@Test
+	public void site3() throws IOException {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.getcalley.com/calley-pro-features/");
+		driver.manage().window().setSize(new Dimension(1536, 864));
+		PageSnapshot ss = Shutterbug.shootPage(driver, Capture.FULL, true);
+		ImageIO.write(ss.getImage(), "PNG",
+				new File("./AllScreenshot/Firefox_desktop_1536x864_site3" + timestamp + ".png"));
+		driver.close();
+	}
+
+	@Test
+	public void site4() throws IOException {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.getcalley.com/best-auto-dialer-app/");
+		driver.manage().window().setSize(new Dimension(1536, 864));
+		PageSnapshot ss = Shutterbug.shootPage(driver, Capture.FULL, true);
+		ImageIO.write(ss.getImage(), "PNG",
+				new File("./AllScreenshot/Firefox_desktop_1536x864_site4" + timestamp + ".png"));
+		driver.close();
+	}
+
+	@Test
+	public void site5() throws IOException {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.getcalley.com/how-calley-auto-dialer-app-works/");
+		driver.manage().window().setSize(new Dimension(1536, 864));
+		PageSnapshot ss = Shutterbug.shootPage(driver, Capture.FULL, true);
+		ImageIO.write(ss.getImage(), "PNG",
+				new File("./AllScreenshot/Firefox_desktop_1536x864_site5" + timestamp + ".png"));
+		driver.close();
+	}
+
+}

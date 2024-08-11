@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="ChromeDesktop.Desktop1" />
+			<class name="ChromeDesktop.Desktop2" />
+			<class name="ChromeDesktop.Desktop3" />
+
+			<class name="ChromeMobile.Mobile1" />
+			<class name="ChromeMobile.Mobile2" />
+			<class name="ChromeMobile.Mobile3" />
+
+			<class name="FireFoxDesktop.Desktop1" />
+			<class name="FireFoxDesktop.Desktop2" />
+			<class name="FireFoxDesktop.Desktop3" />
+
+			<class name="FireFoxMobile.Mobile1" />
+			<class name="FireFoxMobile.Mobile2" />
+			<class name="FireFoxMobile.Mobile3" />
+
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
